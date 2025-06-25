@@ -140,7 +140,7 @@ let countries = ["Uruguay", "Zimbabwe", "Austria", "Germany"];
 console.log(copySorted(countries));
 console.log(countries);*/
 
-let arr = [1, 3, 5, 7, 9]
+/*let arr = [1, 3, 5, 7, 9]
 
 function shuffle(arr) {
   for (let i = arr.length - 1; i > 0; i--) {
@@ -149,4 +149,89 @@ function shuffle(arr) {
   }
   return arr;
 }
-console.log(shuffle(arr));
+console.log(shuffle(arr));*/
+
+/*function unique(arr) {
+  let newArray = [];
+  for (let i = arr.length-1; i >0; i--) {
+    if (!newArray.includes(arr[i]))  {
+      newArray.push(arr[i]);
+    }
+  }
+return newArray;
+}
+
+let array = ["Hare", "Krishna", "Hare", "Krishna", "Krishna", "Krishna", "Hare", "Hare", ":-O"];
+console.log(unique(array));*/
+
+/*const removeFromArray = function(arr, ...items) {
+   return arr.filter((item) => !items.includes(item));
+};
+console.log(removeFromArray([1, 3, 4, 7, 11, 9], 7));*/
+
+/*const leapYears = function(a) {
+   let year = a;
+   if (year % 400 === 0) {
+    return true
+   } else if (year % 100 === 0) {
+    return false
+   } else if (year % 4 === 0) {
+    return true
+   };
+};
+
+console.log(leapYears(1600));*/
+
+/*const convertToCelsius = function (temp) {
+  let tempConverted = (temp - 32) * (5 / 9);
+  let rounded = tempConverted.toFixed(1);
+  let roundedNumber = Number(rounded);
+  return roundedNumber;
+};*/
+
+//below is work that centers arounf DOM manipulation
+
+const container = document.querySelector("#container");
+
+const para = document.createElement("p");
+para.classList.add("paragraph");
+para.textContent = "Hey I'm red!";
+para.style.color = "red";
+
+container.appendChild(para);
+
+const headingThree = document.createElement("h3");
+headingThree.textContent = "I'm a blue h3!";
+headingThree.style.color = "blue";
+
+container.appendChild(headingThree);
+
+const newDiv = document.createElement("div");
+newDiv.setAttribute("style", "border: black; background: pink;");
+const headingOne = document.createElement("h1");
+headingOne.textContent = "I'm in a div";
+const paraInDiv = document.createElement("p");
+paraInDiv.textContent = "ME TOO!"
+
+newDiv.appendChild(headingOne);
+newDiv.appendChild(paraInDiv);
+container.appendChild(newDiv);
+
+const btn = document.querySelector("#btn");
+btn.onclick = () => alert("Hello World");
+const btnTwo = document.querySelector("#btnTwo");
+btnTwo.addEventListener("click", () => {
+  alert("Hello World");
+});
+
+const btwnThree = document.querySelector("#btnThree");
+btwnThree.addEventListener("click", function (e) {
+  e.target.style.background = "blue"; //this turns the button blue!!!!
+});
+
+const buttons = document.querySelector("button");
+buttons.forEach((button) => {
+  button.addEventListener("click", () => {
+    alert(button.id);
+  });
+});
