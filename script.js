@@ -229,9 +229,10 @@ btwnThree.addEventListener("click", function (e) {
   e.target.style.background = "blue"; //this turns the button blue!!!!
 });
 
-const buttons = document.querySelector("button");
+const buttons = document.querySelectorAll("button");
+
 buttons.forEach((button) => {
-  button.addEventListener("click", () => {
-    alert(button.id);
+  button.addEventListener("click", (button) => {
+    button.target.style.background = "green";
   });
 });
